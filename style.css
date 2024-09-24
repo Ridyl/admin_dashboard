@@ -4,13 +4,29 @@
 }
 
 .page-grid-wrapper {
-    height: 90vh;
+    height: 100vh;
     display: grid;
     grid-template: 75px 100px 3fr / 275px 4fr;
 }
 
 .search {
     grid-column: 2 / 3;
+    align-content: center;
+}
+
+.search input {
+    width: 50%;
+    border: none;
+    background-color: #E0E0E2;
+    height: 30px;
+    border-radius: 15px;
+    padding: 0 10px;
+}
+
+.bell,
+.notification {
+    height: 20px;
+    padding: 0 10px;
 }
 
 .header {
