@@ -4,9 +4,9 @@
 }
 
 .page-grid-wrapper {
-    height: 100vh;
+    height: 90vh;
     display: grid;
-    grid-template: .5fr 1fr 10fr / 1fr 5fr;
+    grid-template: 75px 100px 3fr / 275px 4fr;
 }
 
 .search {
@@ -19,17 +19,38 @@
 
 .sidebar {
     grid-row: 1 / 4;
+    background-color: #416788;
 }
 
 .content-area {
     display: grid;
-    grid-template: 1fr 1fr / 4fr 1fr;
+    grid-template-columns:1fr 250px;
+    height: 100%;
 }
 
 .projects {
-    height: 100%;
+    background-color: #E0E0E2;
+    padding: 25px;
+    grid-row: 1 / 4;
+}
+
+.card-wrapper {
     grid-row: 1 / 4;
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.content-title {
+    grid-column: 1 / 4;
+}
+
+.card {
+    height: 175px;
+    padding: 15px 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .announcements {
@@ -39,3 +60,10 @@
 .trending {
     grid-column: 2 / 2;
 }
+
+/* color pallete
+platinum: #E0E0E2
+tiffany blue: #81D2C7
+french gray: #B5BAD0
+glaucous: #7389AE
+lapis lazuli: #416788 */
