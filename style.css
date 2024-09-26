@@ -84,27 +84,41 @@ li {
 
 .projects {
     background-color: #E0E0E2;
-    padding: 25px;
+    padding: 24px;
     grid-row: 1 / 4;
+    display: grid;
+    grid-template-rows: 24px 1fr;
+    gap: 12px;
+}
+
+.content-title {
+    font-weight: 600;
 }
 
 .card-wrapper {
-    grid-row: 1 / 4;
+    /* grid-row: 1 / 4; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 25px;
 }
 
-.content-title {
-    grid-column: 1 / 4;
-}
-
 .card {
     height: 175px;
-    padding: 15px 10px;
+    padding: 15px 18px;
     border: none;
     border-radius: 10px;
-    background-color: white;
+    background: linear-gradient(to right, #81D2C7 8px, white 8px);
+    display: grid;
+    grid-template-rows: .5fr 1fr .5fr;
+    gap: 4px;
+    box-shadow: 3px 5px 5px #8b8b8b;
+}
+
+.card .card-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: end;
+    align-self: flex-end;
 }
 
 .svg-card {
