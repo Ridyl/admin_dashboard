@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .page-grid-wrapper {
@@ -42,20 +43,37 @@
 }
 
 .sidebar {
+    padding: 12px;
     grid-row: 1 / 4;
     background-color: #416788;
     color: white;
-    font-size: x-large;
+    font-size: 1.5em;
+    font-weight: 600;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 10% 30% 60%;
+    gap: 48px;
 }
 
 .sidebar .logo {
     height: 64px;
+    padding-right: 12px;
+    position: relative;
+    top: 0.7em;
+}
+
+.sidebar .title {
+    font-size: 1.3em;
+}
+
+li {
+    padding: 8px;
 }
 
 .sidebar .sidebar-icon {
     height: 24px;
+    padding-right: 12px;
+    position: relative;
+    top: 0.15em;
 }
 
 .content-area {
