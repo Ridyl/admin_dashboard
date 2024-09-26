@@ -12,7 +12,6 @@
 
 .search {
     grid-column: 2 / 3;
-    align-content: center;
 }
 
 .search input {
@@ -34,12 +33,35 @@
     height: 64px;
 }
 
-.header .profile-picture {
-    height: 128px;
-}
-
 .header {
     grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 124px repeat(2, minmax(0, 1fr));
+    /* minmax() is ensuring that the grid will not extend past its given space no matter the contents */
+    grid-template-rows: minmax(0, 1fr);
+    contain: size;
+}
+
+.header .profile-picture {
+    height: 112px;
+    padding-left: 24px;
+}
+
+.greeting-container {
+    padding-top: 24px;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-container .hello-there {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.greeting-container .user-name {
+    font-size: 32px;
+    font-weight: 600;
 }
 
 .sidebar {
