@@ -5,13 +5,11 @@
 }
 
 .page-grid-wrapper {
-    height: 100vh;
     display: grid;
-    grid-template: 75px 100px 3fr / 275px 4fr;
+    grid-template: 75px 100px minmax(0, 1fr) / 275px 1fr;
 }
 
 .search {
-    grid-column: 2 / 3;
 }
 
 .search input {
@@ -100,8 +98,7 @@ li {
 
 .content-area {
     display: grid;
-    grid-template-columns:1fr 250px;
-    height: 100%;
+    grid-template-columns:1fr 350px;
 }
 
 .projects {
@@ -118,7 +115,6 @@ li {
 }
 
 .card-wrapper {
-    /* grid-row: 1 / 4; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 25px;
@@ -143,16 +139,55 @@ li {
     align-self: flex-end;
 }
 
+.card-content {
+    color: rgb(53, 53, 53);
+}
+
 .svg-card {
     height: 24px;
 }
 
+.right-content {
+    background-color: #E0E0E2;
+    padding-right: 24px;
+    padding-top: 24px;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.right-content h3 {
+    padding-bottom: 11px;
+}
+
+.right-content .content-title {
+    font-weight: 600;
+}
+
 .announcements {
     grid-column: 2 / 2;
+    padding: 24px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px #8b8b8b;;
+}
+
+.content-block {
+    display: grid;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.announce-card {
+    padding: 4px 8px;
+    border-bottom: 1px solid rgb(160, 160, 160);
+}
+
+.announce-card p {
+    font-size: 14px;
 }
 
 .trending {
-    grid-column: 2 / 2;
+    grid-row: 2 / 3;
 }
 
 /* color pallete
