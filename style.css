@@ -4,16 +4,28 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
 .page-grid-wrapper {
     display: grid;
     grid-template: 75px 100px minmax(0, 1fr) / 275px 1fr;
+    overflow: hidden;
 }
 
 .search {
+    display: grid;
+    grid-template-columns: 1fr 20%;
+    padding-top: 8px;
 }
 
 .search input {
-    width: 50%;
+    width: 70%;
     border: none;
     background-color: #E0E0E2;
     height: 30px;
@@ -21,14 +33,43 @@
     padding: 0 10px;
 }
 
-.bell,
+.search-section {
+    align-content: center;
+    padding-left: 24px;
+}
+
+.mag {
+    position: relative;
+    top: 0.3em;
+}
+
+.profile-section {
+    padding-right: 24px;
+    align-items: center;
+    justify-content: end;
+    contain: size;
+    display: flex;
+    gap: 12px;
+}
+
+.profile-section .user-name {
+    font-size: large;
+    font-weight: bold;
+}
+
+.profile-section .profile-picture {
+    position: relative;
+    top: 0.35em;
+}
+
+.mag,
 .notification {
     height: 24px;
     padding: 0 10px;
 }
 
 .profile-picture {
-    height: 64px;
+    height: 84px;
 }
 
 .header {
@@ -38,6 +79,9 @@
     /* minmax() is ensuring that the grid will not extend past its given space no matter the contents */
     grid-template-rows: minmax(0, 1fr);
     contain: size;
+    box-shadow: 3px 5px 5px #8b8b8b;
+    position:relative;
+    z-index:10
 }
 
 .header .profile-picture {
@@ -60,6 +104,24 @@
 .greeting-container .user-name {
     font-size: 32px;
     font-weight: 600;
+}
+
+button {
+    border: none;
+    color: white;
+    font-size: 1.3em;
+    background-color: #416788;
+    border-radius: 30px;
+    width: 4.5em;
+    padding: 4px 0;
+    height: 36px;
+}
+
+.button-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 120px));
+    justify-content: end;
+    align-items: center;
 }
 
 .sidebar {
@@ -99,6 +161,7 @@ li {
 .content-area {
     display: grid;
     grid-template-columns:1fr 350px;
+    min-height: 81.5vh;
 }
 
 .projects {
@@ -153,22 +216,20 @@ li {
     padding-top: 24px;
     display: grid;
     grid-template-rows: repeat(2, minmax(0, 1fr));
+    min-height: 78.9vh;
 }
 
 .right-content h3 {
     padding-bottom: 11px;
 }
 
-.right-content .content-title {
-    font-weight: 600;
-}
 
 .announcements {
     grid-column: 2 / 2;
-    padding: 24px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 3px 5px 5px #8b8b8b;;
+    padding: 24px;
 }
 
 .content-block {
@@ -184,10 +245,46 @@ li {
 
 .announce-card p {
     font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grid-wrapper-bottom {
+    align-content: baseline;
+    padding-top: 12px;
 }
 
 .trending {
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
+    padding: 24px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px #8b8b8b;
+    align-self: baseline;
+}
+
+.trending-card {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+}
+
+.trending-card img {
+    height: 48px;
+    background-color: #81D2C7;
+    border-radius: 60px;
+    border: 2px solid #416788;
+}
+
+.trending-name {
+    font-weight: 600;
+}
+
+.trending-content {
+    color: rgb(53, 53, 53);
 }
 
 /* color pallete
